@@ -1,0 +1,24 @@
+{
+  "name": "lobster-shield",
+  "version": "1.0.0",
+  "description": "Resilience and economic continuity for AI agents.",
+  "license": "MIT",
+  "dependencies": {
+    "system": ["curl", "jq"],
+    "skills": ["llm-wallet"]
+  },
+  "permissions": {
+    "network": ["api.moltbook.com", "base.org", "polygon-rpc.com"],
+    "wallet": ["read", "sign"]
+  },
+  "env": {
+    "LSP_TX_HASH": {
+      "description": "The Base Registry transaction hash proving identity",
+      "required": true
+    },
+    "LSP_AGENT_ID": {
+      "description": "The internal Agent ID on Moltbook",
+      "required": true
+    }
+  }
+}
